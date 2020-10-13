@@ -24,7 +24,7 @@ public class SeleniumWait {
 	//String url = "http://the-internet.herokuapp.com/dynamic_loading/1";
 	static WebDriver driver;
 	
-	@Test (enabled=false)
+	@Test
 	public void waitForHelloWorld() {
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 		driver = new ChromeDriver();
