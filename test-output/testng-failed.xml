@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [AlLTests]">
-  <parameter name="browser" value="firefox"/>
-  <test thread-count="5" name="PositiveLoginTests(failed)">
-    <groups>
-      <run>
-        <include name="PositiveTest"/>
-      </run>
-    </groups>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.herokuapp.theinternet.LoginTests">
+      <class name="com.herokuapp.theinternet.SeleniumWait">
         <methods>
-          <include name="initiateDriver"/>
-          <include name="positiveLoginTest"/>
-          <include name="closeBrowser"/>
+          <include name="waitForHelloWorld"/>
         </methods>
-      </class> <!-- com.herokuapp.theinternet.LoginTests -->
+      </class> <!-- com.herokuapp.theinternet.SeleniumWait -->
     </classes>
-  </test> <!-- PositiveLoginTests(failed) -->
-</suite> <!-- Failed suite [AlLTests] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

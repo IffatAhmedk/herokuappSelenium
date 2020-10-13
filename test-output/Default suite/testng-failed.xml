@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.herokuapp.theinternet.NegativeTests">
+      <class name="com.herokuapp.theinternet.SeleniumWait">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="negativePasswordTest"/>
-          <include name="initiateDriver"/>
+          <include name="waitForHelloWorld"/>
         </methods>
-      </class> <!-- com.herokuapp.theinternet.NegativeTests -->
+      </class> <!-- com.herokuapp.theinternet.SeleniumWait -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

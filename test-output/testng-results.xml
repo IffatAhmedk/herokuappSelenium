@@ -1,56 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="8" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="AlLTests" duration-ms="3545" started-at="2020-10-11T00:38:15 PKT" finished-at="2020-10-11T00:38:19 PKT">
+  <suite name="Default suite" duration-ms="75564" started-at="2020-10-13T21:13:36 PKT" finished-at="2020-10-13T21:14:52 PKT">
     <groups>
-      <group name="NegativeTest">
-        <method signature="LoginTests.negativePasswordTest()[pri:2, instance:com.herokuapp.theinternet.LoginTests@5d76b067]" name="negativePasswordTest" class="com.herokuapp.theinternet.LoginTests"/>
-        <method signature="LoginTests.negativeUsernameTest()[pri:1, instance:com.herokuapp.theinternet.LoginTests@5d76b067]" name="negativeUsernameTest" class="com.herokuapp.theinternet.LoginTests"/>
-        <method signature="LoginTests.negativeUsernameaAndPasswordTest()[pri:3, instance:com.herokuapp.theinternet.LoginTests@5d76b067]" name="negativeUsernameaAndPasswordTest" class="com.herokuapp.theinternet.LoginTests"/>
-      </group> <!-- NegativeTest -->
-      <group name="PositiveTest">
-        <method signature="LoginTests.positiveLoginTest()[pri:4, instance:com.herokuapp.theinternet.LoginTests@e320068]" name="positiveLoginTest" class="com.herokuapp.theinternet.LoginTests"/>
-      </group> <!-- PositiveTest -->
     </groups>
-    <test name="NegativeLoginTests" duration-ms="2601" started-at="2020-10-11T00:38:15 PKT" finished-at="2020-10-11T00:38:18 PKT">
-      <class name="com.herokuapp.theinternet.LoginTests">
-        <test-method status="PASS" signature="negativeUsernameTest()[pri:1, instance:com.herokuapp.theinternet.LoginTests@5d76b067]" name="negativeUsernameTest" duration-ms="878" started-at="2020-10-11T00:38:15 PKT" finished-at="2020-10-11T00:38:16 PKT">
+    <test name="Default test" duration-ms="75564" started-at="2020-10-13T21:13:36 PKT" finished-at="2020-10-13T21:14:52 PKT">
+      <class name="com.herokuapp.theinternet.SeleniumWait">
+        <test-method status="PASS" signature="waitForHelloWorld()[pri:0, instance:com.herokuapp.theinternet.SeleniumWait@30b8a058]" name="waitForHelloWorld" duration-ms="33720" started-at="2020-10-13T21:13:36 PKT" finished-at="2020-10-13T21:14:10 PKT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- negativeUsernameTest -->
-        <test-method status="PASS" signature="negativePasswordTest()[pri:2, instance:com.herokuapp.theinternet.LoginTests@5d76b067]" name="negativePasswordTest" duration-ms="812" started-at="2020-10-11T00:38:16 PKT" finished-at="2020-10-11T00:38:17 PKT">
+        </test-method> <!-- waitForHelloWorld -->
+        <test-method status="PASS" signature="waitForHelloWorld2()[pri:0, instance:com.herokuapp.theinternet.SeleniumWait@30b8a058]" name="waitForHelloWorld2" duration-ms="41775" started-at="2020-10-13T21:14:10 PKT" finished-at="2020-10-13T21:14:52 PKT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- negativePasswordTest -->
-        <test-method status="PASS" signature="negativeUsernameaAndPasswordTest()[pri:3, instance:com.herokuapp.theinternet.LoginTests@5d76b067]" name="negativeUsernameaAndPasswordTest" duration-ms="862" started-at="2020-10-11T00:38:17 PKT" finished-at="2020-10-11T00:38:18 PKT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- negativeUsernameaAndPasswordTest -->
-      </class> <!-- com.herokuapp.theinternet.LoginTests -->
-    </test> <!-- NegativeLoginTests -->
-    <test name="PositiveLoginTests" duration-ms="915" started-at="2020-10-11T00:38:18 PKT" finished-at="2020-10-11T00:38:19 PKT">
-      <class name="com.herokuapp.theinternet.LoginTests">
-        <test-method status="PASS" signature="initiateDriver(java.lang.String)[pri:0, instance:com.herokuapp.theinternet.LoginTests@e320068]" name="initiateDriver" is-config="true" duration-ms="12930" started-at="2020-10-11T00:38:02 PKT" finished-at="2020-10-11T00:38:15 PKT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initiateDriver -->
-        <test-method status="PASS" signature="positiveLoginTest()[pri:4, instance:com.herokuapp.theinternet.LoginTests@e320068]" name="positiveLoginTest" duration-ms="909" started-at="2020-10-11T00:38:18 PKT" finished-at="2020-10-11T00:38:19 PKT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- positiveLoginTest -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.herokuapp.theinternet.LoginTests@e320068]" name="closeBrowser" is-config="true" duration-ms="1873" started-at="2020-10-11T00:38:19 PKT" finished-at="2020-10-11T00:38:21 PKT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.herokuapp.theinternet.LoginTests -->
-    </test> <!-- PositiveLoginTests -->
-  </suite> <!-- AlLTests -->
+        </test-method> <!-- waitForHelloWorld2 -->
+      </class> <!-- com.herokuapp.theinternet.SeleniumWait -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
