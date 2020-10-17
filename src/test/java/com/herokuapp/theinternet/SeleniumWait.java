@@ -85,4 +85,58 @@ public class SeleniumWait {
 		
 		driver.quit();
 	}
+
+	@Test (priority = 1)
+	public void dynamicControls() {
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+		driver = new ChromeDriver();
+		
+		driver.get("http://the-internet.herokuapp.com/dynamic_controls");
+		driver.manage().window().maximize();
+		
+		WebElement checkbox = driver.findElement(By.xpath("//input[@type='checkbox']"));
+		WebElement removeButton = driver.findElement(By.xpath("//button[contains(text(), 'Remove')]"));
+		checkbox.click();
+		removeButton.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		
+		//Assert.assertTrue(wait.until(ExpectedConditions.invisibilityOf(checkbox)), "Checkbox is still visible");
+		//Assert.assertFalse(checkbox.isDisplayed());		
+        
+		Assert.assertTrue(wait.until(ExpectedConditions.stalenessOf(checkbox)));
+		WebElement addButton = driver.findElement(By.xpath("//button[contains(text(), 'Add')]"));
+		
+		addButton.click();
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//input[@type='checkbox']")));
+		
+		checkbox = driver.findElement(By.xpath("//input[@type='checkbox']"));
+		
+		Assert.assertTrue(checkbox.isDisplayed(), "Checkbox is not displayed, when it should be");
+		
+		driver.quit();
+	}	
+
+	@Test (priority = 1)
+	public void disabledElementTest() {
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+		driver = new ChromeDriver();
+		
+		driver.get("http://the-internet.herokuapp.com/dynamic_controls");
+		driver.manage().window().maximize();
+		
+		WebElement enableButton = driver.findElement(By.xpath("//button[contains(text(), 'Enable')]"));
+		WebElement textBox = driver.findElement(By.xpath("//input[@type='text']"));
+		enableButton.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		//wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("message")));
+		wait.until(ExpectedConditions.elementToBeClickable(textBox));
+		
+		textBox.sendKeys("Hello World");
+		Assert.assertEquals(textBox.getAttribute("value"), "Hello World", "Field does not have text 'Hello World'");
+				
+		driver.quit();
+	}
+
 }
